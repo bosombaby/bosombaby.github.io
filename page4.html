@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<head>
+<meta http-equiv="Content-Type">
+<meta content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>我特意给你写的贺卡，真心的！</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script >
+var url = window.location.search;
+</script>
+</head>
+<body>
+<div id="xingming" class="page page4">
+<img class="logo2016 animate-zoomInDown" src="img/page5/2022.png"> 
+<div class="title">请选择您的祝福语</div>
+<div class="inputyourword">
+<div class="wordchose">
+<textarea disabled="disabled" class="yourword selected" id="selected" rows="2" cols="20">给你虎虎的祝福，虎虎的甜蜜，虎虎的运气，虎虎的健康，虎虎的快乐，虎虎的心情，虎虎的欣慰，虎虎的顺利，虎虎的幸福，虎虎的人生！
+</textarea>
+</div>
+<div class="wordchose">
+<textarea disabled="disabled" class="yourword" id="" rows="2" cols="20">虎年祝你财源滚滚，发得像肥虎，身体壮的像头虎，爱情甜的像奶虎，好运多的像虎毛，事业蒸蒸像大虎！</textarea>
+</div>
+<div class="wordchose">
+<textarea disabled="disabled" class="yourword" id="" rows="2" cols="20">
+虎年将至，送你个祝福，一年四季的平安，个月的财运，天的圆满，小时的幸福，随时随地的开心，一生一世的幸福。预祝春节快乐！
+</textarea>
+</div>
+<div class="wordchose">
+<textarea disabled="disabled" class="yourword" id="" rows="2" cols="20">总有起风的清晨，总有温暖的午后，总有灿烂的黄昏，总有流星的夜晚，总有一个人在祈祷世界上所有的美好全部属于你！祝你虎年快乐，心想事成！</textarea>
+</div>
+<div class="wordchose">
+<textarea disabled="disabled" class="yourword" id="" rows="2" cols="20">
+忘不掉的是浓浓的年味儿，讲不完的是悠悠的年事儿，吃不够的是甜甜的年饭儿，盼不够的是火火的年景儿，捎不完的是虎虎的年信儿。
+</textarea>
+</div>
+<div class="wordchose">
+<textarea class="yourword" id="" rows="3" cols="20" placeholder="自定义祝福语(40字以内)"  maxlength="40"></textarea>
+</div>
+</div>
+<div class="choseok" onClick="nextstep()">确认选择</div>
+</div>
+<script src="js/index.js"></script> 
+<script>
+    $(function(){
+	$('.inputyourword .wordchose').click(function(){
+		$('.inputyourword textarea').removeClass("selected");
+		$('.inputyourword textarea').attr('id','choseword');
+		$(this).children().addClass("selected"); 
+		$(this).children().attr('id','selected');
+		});
+	});
+	
+ function nextstep(){
+
+var lujin="page5.html"+url+"&wo="+document.getElementById('selected').value+"&end";
+
+ location.href=lujin;
+ }
+</script>
+</body>
+</html>
